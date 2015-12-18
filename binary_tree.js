@@ -5,7 +5,6 @@
  * Binary Node
  * 
  */
-
 let BinaryNode = (left_ref, key, value_of, right_ref, length) => {
     
 };
@@ -29,7 +28,21 @@ let BinaryNodeRef = () => {
  * 
  */
 let BinaryTree = () => {
-    
+    return () => {
+        
+        return {
+            get: () => {
+                
+            },
+            set: () => {
+                
+            },
+            delete: () => {
+                
+            }
+        };
+    };
+
 };
 
 
