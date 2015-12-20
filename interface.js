@@ -2,18 +2,23 @@
 
 let binaryTree = require('./binary_tree');
 
-let db = (f) => {
-    return () => {
+let db = (file) => {
+    let storge = require('./physical')(file),
+        tree =  binaryTree.BinaryTree(storge);
 
-        let argvs = [].slice.call(arguments, 0);
 
-        let tree =  binaryTree.BinaryTree();
-        
-        
-        
-    };
+    return {
+        commit: () => {
+            if ( file ) {
+                storge.flush();
+            }
+        },
+
+        get: tree.get,
+
+        set: tree.set,
+
+        delete: tree.delete
 };
 
 module.exports = db;
-
-

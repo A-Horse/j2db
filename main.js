@@ -6,7 +6,7 @@ let str = require('./lib/str');
 
 
 
-let getArgvs = () => process.argv.slice(2);
+let getArgvs = () => [].slice.call(arguments, 0);
 
 let outPutUsage = () => {
     str.outPut('Usage:');
@@ -15,17 +15,11 @@ let outPutUsage = () => {
 let main = () => {
 
     let argv = getArgvs();
-    
-    {
-        let length = argv.length;
-        if ( length <= 3 || length >= 4  ) {
-            outPutUsage();
-        }
+
+    let length = argv.length;
+    if ( length <= 3 || length >= 4  ) {
+        outPutUsage();
     }
-    
-    
-    
-    
     
     
 };

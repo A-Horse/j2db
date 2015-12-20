@@ -1,48 +1,24 @@
 'use strict';
 
-/**
- *   
- * Binary Node
- * 
- */
-let BinaryNode = (left_ref, key, value_of, right_ref, length) => {
-    
-};
-
-
-/**
- *   
- * Binary Node Ref
- * 
- */
-let BinaryNodeRef = () => {
-    
-};
-
-
-
 
 /**
  *   
  * Binary Tree
  * 
  */
-let BinaryTree = () => {
-    return () => {
-        
-        return {
-            get: () => {
-                
-            },
-            set: () => {
-                
-            },
-            delete: () => {
-                
-            }
-        };
+let BinaryTree = (storge) => {
+    let meta = storge.meta();
+    return {
+        get: (key) => {
+            return meta[key];
+        },
+        set: (key, value) => {
+            return meta[key] = value;
+        },
+        delete: (key) => {
+            delete meta[key];
+        }
     };
-
 };
 
 
