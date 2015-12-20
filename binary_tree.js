@@ -21,7 +21,7 @@ let BinaryTree = (storge) => {
     };
 };
 
-
+module.exports = BinaryTree;
 
 
 
